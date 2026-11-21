@@ -1,1 +1,1 @@
-import React from 'react';import{render,screen}from'@testing-library/react';import{it,expect}from'vitest';import App from './App.jsx';it('shows clearly labelled demo mode',()=>{render(<App/>);expect(screen.getByText(/DEMO MODE/)).toBeTruthy()});
+import React from 'react';import{render,screen}from'@testing-library/react';import{it,expect}from'vitest';import App from './App.jsx';globalThis.ResizeObserver=class{observe(){}unobserve(){}disconnect(){}};it('shows clearly labelled demo mode',()=>{render(<App/>);expect(screen.getByText(/DEMO MODE/)).toBeTruthy()});
