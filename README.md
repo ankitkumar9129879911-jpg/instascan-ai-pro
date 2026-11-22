@@ -26,7 +26,7 @@ The frontend includes a web-app manifest and service worker. After deploying it 
 
 ## Browser preview
 
-The GitHub Pages workflow publishes a static dashboard preview from this branch. It uses fictional sample data only; the Instagram connection button is disabled because GitHub Pages does not run the Express API. Preview URL: https://ankitkumar9129879911-jpg.github.io/instascan-ai-pro/ (available after the Pages workflow completes and GitHub Pages is enabled for the repository).
+The GitHub Pages workflow publishes a static dashboard preview from this branch. It uses fictional sample data only; the Instagram connection button is disabled because GitHub Pages does not run the Express API. To enable it, open repository **Settings → Pages**, set **Build and deployment → Source** to **GitHub Actions**, then open **Actions → Publish dashboard preview → Run workflow**. Preview URL: https://ankitkumar9129879911-jpg.github.io/instascan-ai-pro/ (available after the workflow succeeds).
 
 ## Deploy a demo
 
