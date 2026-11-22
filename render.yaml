@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: instascan-ai-pro
+    runtime: node
+    plan: free
+    branch: feat/instascan-ai-pro
+    buildCommand: npm install --prefix frontend && npm install --prefix backend && npm run build
+    startCommand: npm --prefix backend start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: NODE_ENV
+        value: production
+      - key: DEMO_MODE
+        value: "true"
+      - key: DATABASE_PATH
+        value: ./data/instascan.sqlite
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: FRONTEND_URL
+        value: https://instascan-ai-pro.onrender.com
