@@ -1,5 +1,6 @@
-const CACHE = 'instascan-shell-v1';
-const SHELL = ['/', '/manifest.webmanifest', '/icons/icon.svg'];
+const BASE = new URL(self.registration.scope).pathname;
+const CACHE = 'instascan-shell-v2';
+const SHELL = [BASE, BASE + 'manifest.webmanifest', BASE + 'icons/icon.svg'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(SHELL)));
@@ -26,6 +27,6 @@ self.addEventListener('fetch', (event) => {
         caches.open(CACHE).then((cache) => cache.put(request, copy));
       }
       return response;
-    }).catch(() => caches.match(request).then((cached) => cached || caches.match('/')))
+    }).catch(() => caches.match(request).then((cached) => cached || caches.match(BASE)))
   );
 });
