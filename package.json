@@ -1,1 +1,17 @@
-{"name":"instascan-ai-pro","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"concurrently \"npm:server\" \"npm:client\"","server":"npm --prefix backend run dev","client":"npm --prefix frontend run dev","build":"npm --prefix frontend run build","test":"npm --prefix backend test && npm --prefix frontend test"},"devDependencies":{"concurrently":"^9.1.2"}}
+{
+  "name": "instascan-ai-pro",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:server\" \"npm:client\"",
+    "server": "npm --prefix backend run dev",
+    "client": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix backend test && npm --prefix frontend test",
+    "setup": "npm install --prefix frontend && npm install --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
