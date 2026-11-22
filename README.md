@@ -24,6 +24,10 @@ On Windows, you can alternatively double-click `start-windows.bat` after install
 
 The frontend includes a web-app manifest and service worker. After deploying it over HTTPS, open the site in Chrome on Android, use the browser menu, and choose **Install app** or **Add to Home screen** if offered. This installs a home-screen web app (PWA), not a signed APK.
 
+## Browser preview
+
+The GitHub Pages workflow publishes a static dashboard preview from this branch. It uses fictional sample data only; the Instagram connection button is disabled because GitHub Pages does not run the Express API. Preview URL: https://ankitkumar9129879911-jpg.github.io/instascan-ai-pro/ (available after the Pages workflow completes and GitHub Pages is enabled for the repository).
+
 ## Deploy a demo
 
 A Render Blueprint is included in `render.yaml`. In Render, create a new Blueprint and select this repository and the `feat/instascan-ai-pro` branch. Render reads the configuration and builds the frontend, then serves it from the Node backend. The public demo uses fictional sample metrics; do not use it for real Instagram accounts until production session storage, database persistence, Meta credentials, and HTTPS OAuth settings are reviewed and configured.
