@@ -1,16 +1,16 @@
 {
-  "id": "/",
+  "id": "./",
   "name": "InstaScan AI Pro",
   "short_name": "InstaScan",
   "description": "Creator analytics dashboard",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#11101b",
   "theme_color": "#11101b",
   "icons": [
     {
-      "src": "/icons/icon.svg",
+      "src": "./icons/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
